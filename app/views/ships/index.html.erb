@@ -3,6 +3,7 @@
   <tbody>
     <% @ships.each do |ship| %>
       <h2><%= ship.name %></h2>
+      <%= cl_image_tag @ship.photo.key, height: 300, width: 400, crop: :fill %>
       <p><%= ship.category %></p>
       <p><%= ship.location %></p>
       <p><%= ship.price %></p>
