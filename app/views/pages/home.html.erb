@@ -1,27 +1,32 @@
-<div class="bg-main">
-  <div class="fold">
-    <h1 id="fold-title">Time to set the Sails</h1>
-    <a class="button" href="../ships">Navigate</a>
+<tbody>
+  <div class="bg-main">
+    <div class="fold">
+      <h1 id="fold-title">Time to set the Sails</h1>
+      <a class="button" href="../ships">Navigate</a>
+    </div>
   </div>
-</div>
-<div class="margin-20">
-  <div class="cards no-return">
-    <% @ships.each do |ship| %>
-    <%= link_to ship_path(ship) do %>
-      <div class="card">
-        <div>
-          <img class="ship-img" src="https://source.unsplash.com/1600x900/?boat,yacht" alt="ship image">
+  <div class="margin-20">
+    <div class="cards no-return">
+      <% @ships.each do |ship| %>
+        <%= link_to ship_path(ship) do %>
+        <div class="card">
+          <div>
+            <img class="ship-img" src="https://source.unsplash.com/1600x900/?boat,yacht" alt="ship image">
+          </div>
+          <div class="card-description">
+            <h2><%= ship.name %></h2>
+            <%# <%= cl_image_tag @ship.photo.key, height: 300, width: 400, crop: :fill %>
+              <p><%= ship.category%>
+                ∙
+                <%= ship.location %></p>
+              <p class="card-price"><%= ship.price %>
+                CHF</p>
+              <%# <td><%= link_to 'Edit', edit_ship_path(garden)</td> %>
+                <%# <td><%= link_to 'Destroy', ship, method: :delete, data: { confirm: 'Are you sure?' }</td> %>
+                </div>
+              </div>
+            <% end %>
+          <% end %>
         </div>
-        <div class="card-description">
-          <h2><%= ship.name %></h2>
-          <%# <%= cl_image_tag @ship.photo.key, height: 300, width: 400, crop: :fill %>
-          <p><%= ship.category%> ∙ <%= ship.location %></p>
-          <p class="card-price"><%= ship.price %> CHF</p>
-            <%# <td><%= link_to 'Edit', edit_ship_path(garden)</td> %>
-            <%# <td><%= link_to 'Destroy', ship, method: :delete, data: { confirm: 'Are you sure?' }</td> %>
       </div>
-      </div>
-      <% end %>
-    <% end %>
-  </div>
-</div>
+    </tbody>
