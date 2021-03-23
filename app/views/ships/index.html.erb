@@ -1,1 +1,14 @@
-<h1>Index</h1>
+<h1>All the ships</h1>
+
+  <tbody>
+    <% @ships.each do |ship| %>
+      <h2><%= ship.name %></h2>
+      <p><%= ship.category %></p>
+      <p><%= ship.location %></p>
+      <p><%= ship.price %></p>
+        <%# <td><%= link_to 'Show', ship</td> %>
+        <%# <td><%= link_to 'Edit', edit_ship_path(garden)</td> %> 
+        <%# <td><%= link_to 'Destroy', ship, method: :delete, data: { confirm: 'Are you sure?' }</td> %> 
+    <% end %>
+  </tbody>
+</table>
