@@ -14,8 +14,20 @@
   color: $white;
 }
 h1{
-  font-size: 20px;
+  font-size: 10px;
   color: $deep-blue;
+}
+h2{
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+p{
+  font-size: 18px;
+  opacity: 0.8;
+  margin-bottom: 0px;
 }
 .bg-main{
   height: 60vh;
@@ -24,4 +36,17 @@ h1{
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
+}
+.ship-img{
+  height: 200px;
+  width: 350px;
+  margin: 3px;
+  margin-bottom: 5px;
+}
+.margin-20{
+  margin-left: 20%;
+  margin-right: 20%;
+  repeat: no-repeat;
+  position: center;
+  size: cover;
 }
