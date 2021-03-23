@@ -4,11 +4,14 @@
     <a class="button" href="../ships">Navigate</a>
   </div>
 </div>
-<div class="">
+<div class="margin-20">
   <div class="cards">
     <% @ships.each do |ship| %>
       <div class="">
         <div class="card" style="">
+          <div>
+            <img class="ship-img" src="https://source.unsplash.com/1600x900/?boat,yacht" alt="ship image">
+          </div>
           <div class="card-description">
             <h2><%= ship.name %></h2>
             <p><%= ship.description %></p>
