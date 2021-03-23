@@ -1,15 +1,23 @@
-<h1>All the ships</h1>
+<h1 class="title-index">All the ships</h1>
 
   <tbody>
-    <% @ships.each do |ship| %>
-      <h2><%= ship.name %></h2>
-      <%# <%= cl_image_tag @ship.photo.key, height: 300, width: 400, crop: :fill %> 
-      <p><%= ship.category %></p>
-      <p><%= ship.location %></p>
-      <p><%= ship.price %></p>
-      <p><%= link_to 'View this awesome ship', ship_path(ship) %></p>
-        <%# <td><%= link_to 'Edit', edit_ship_path(garden)</td> %> 
-        <%# <td><%= link_to 'Destroy', ship, method: :delete, data: { confirm: 'Are you sure?' }</td> %> 
-    <% end %>
+    <div class="cards">
+      <% @ships.each do |ship| %>
+      <%= link_to ship_path(ship) do %>
+        <div class="card">
+          <div>
+            <img class="ship-img" src="https://source.unsplash.com/1600x900/?boat,yacht" alt="ship image">
+          </div>
+          <div class="card-description">
+            <h2><%= ship.name %></h2>
+            <%# <%= cl_image_tag @ship.photo.key, height: 300, width: 400, crop: :fill %>
+            <p><%= ship.category%> ∙ <%= ship.location %></p>
+            <p class="card-price"><%= ship.price %> CHF</p>
+              <%# <td><%= link_to 'Edit', edit_ship_path(garden)</td> %>
+              <%# <td><%= link_to 'Destroy', ship, method: :delete, data: { confirm: 'Are you sure?' }</td> %>
+        </div>
+        </div>
+        <% end %>
+      <% end %>
+    </div>
   </tbody>
-</table>
