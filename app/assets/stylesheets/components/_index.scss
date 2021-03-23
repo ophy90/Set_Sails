@@ -3,3 +3,9 @@
 @import "avatar";
 @import "navbar";
 @import "footer";
+
+.full-page-size{
+  min-width: 100vh;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
