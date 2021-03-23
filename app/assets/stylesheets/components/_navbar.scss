@@ -10,3 +10,41 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.nav-item-container {
+display: flex;
+width: 8fr;
+justify-content: center;
+}
+
+.nav-item-all-ships-btn {
+justify-content: flex-start;
+}
+
+.nav-item-login-btn {
+justify-content: flex-end;
+}
+
+.nav-item {
+  color: #EE6C4D;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 900;
+  border-radius: 5px;
+  opacity: 1;
+}
+
+.nav-item :hover {
+  text-decoration: none;
+  color: white;
+  opacity: 0.9;
+  border: #EE6C4D;
+  border-style: solid;
+  border-radius: 15%;
+  border-width: 2px;
+  transition: 0.3s;
+}
+
+.nav-link {
+color: #EE6C4D !important;
+}
