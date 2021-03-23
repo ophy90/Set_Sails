@@ -10,21 +10,21 @@ puts 'Cleaning database...'
 Ship.destroy_all
 
 puts 'Creating Ships...'
-ship_1 = Ship.create(name:"titanic", description:"grand navire", category:"paquebot", location: "new York", price: 50000.5)
+ship_1 = Ship.create(name:"Titanic", description:"Grand navire", category:"paquebot", location: "New York", price: 500)
 puts "Created ship "
-ship_2 = Ship.create(name:"Radeau", description:"grand radeau", category:"bateau", location: "genève", price: 50.5)
+ship_2 = Ship.create(name:"Radeau", description:"Grand radeau", category:"bateau", location: "Genève", price: 323)
 puts "Created ship "
-ship_3 = Ship.create(name:"barque", description:"grande barque", category:"bateau", location: "Lausanne", price: 70.5)
+ship_3 = Ship.create(name:"Barque", description:"Grande barque", category:"bateau", location: "Lausanne", price: 70.5)
 puts "Created ship "
-ship_4 = Ship.create(name:"Militaire", description:"grand navire de guerre militaire", category:"militaire", location: "Montreux", price: 50000000000.5)
+ship_4 = Ship.create(name:"Militaire", description:"Grand navire de guerre militaire", category:"militaire", location: "Montreux", price: 5000)
 puts "Created ship "
-ship_5 = Ship.create(name:"yacht", description:"grand yacht de luxe", category:"yacht", location: "saint-maurice", price: 5494298350.5)
+ship_5 = Ship.create(name:"Yacht", description:"Grand yacht de luxe", category:"yacht", location: "Saint-maurice", price: 54942)
 puts "Created ship "
-ship_6 = Ship.create(name:"pétrolier", description:"Petrolier d'essence", category:"pétrolier", location: "Valencia", price: 7023890489357.5)
+ship_6 = Ship.create(name:"Pétrolier", description:"Petrolier d'essence", category:"pétrolier", location: "Valencia", price: 70235)
 puts "Created ship "
-ship_7 = Ship.create(name:"Voilier", description:"Voilier à moteur et coque en bois de bambou", category:"voilier", location: "Caraibes", price: 702389.5)
+ship_7 = Ship.create(name:"Voilier", description:"Voilier à moteur et coque en bois de bambou", category:"voilier", location: "Caraibes", price: 702389)
 puts "Created ship "
-ship_8 = Ship.create(name:"Voilier à rames", description:"Voilier à rames", category:"voilier", location: "Caraibes", price: 70289357.5)
+ship_8 = Ship.create(name:"Voilier à rames", description:"Voilier à rames", category:"voilier", location: "Caraibes", price: 702039)
 puts "Created ship "
 
 
