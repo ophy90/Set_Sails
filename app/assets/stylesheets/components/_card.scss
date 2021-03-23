@@ -1,13 +1,28 @@
 .cards{
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 .card{
   background-color: $white;
   border: none;
-  border-radius: 10px;
+  border-radius: 3px;
   box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.09);
   margin: 15px;
-  padding: 11px;
+}
+.card-description{
+  padding: 5px;
+}
+.card-price{
+  color: $white;
+  font-weight: bold;
+  font-size: 14px;
+  opacity: 0.99;
+  background-color: $orange;
+  position: absolute;
+  text-align: right;
+  bottom: 25%;
+  right: 0;
+  padding: 2%;
 }
