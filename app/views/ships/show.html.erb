@@ -4,4 +4,5 @@
 <p><%=@ship.category%></p>
 <p><%=@ship.location%></p>
 <p><%=@ship.price%></p>
+<p><%= link_to 'Book this awesome ship', new_ship_booking_path(@ship) %></p>
 
