@@ -1,9 +1,10 @@
 class BookingsController < ApplicationController
   
   def index
-    @user = current_user
+    # définir user comme le current_user
+    @bookings = Booking.where(user: current_user)
     @ships = Ship.all
-    @bookings = Booking.all
+    
   end
   
   def new
