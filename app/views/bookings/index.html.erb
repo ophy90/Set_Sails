@@ -6,7 +6,12 @@
       <% @bookings.each do |booking| %>
         <div class="card">
           <div id ="booking-dates">
-            <p><%= "start date #{booking.start_time} end date #{booking.end_time} " %></p>
+            <div class="card-description">
+            <p>From</p>
+            <h3><%= "#{booking.start_time}" %></h3>
+            <p>To</p>
+            <h3><%= "#{booking.end_time}" %></h3>
+            </div>
             <div>
               <%= cl_image_tag booking.ship.photo.key, height: 300, width: 400, crop: :fill %>
             </div>
@@ -25,6 +30,8 @@
         </div>
       <%end %>
     </div>
+    <div class="center-button">
     <%= link_to 'Back to ships', ships_path(@ships), class:"button", id: "small" %>
+    </div>
   </div>
 </body>
