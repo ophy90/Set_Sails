@@ -6,9 +6,9 @@
       <% @bookings.each do |booking| %>
         <div class="card">
           <div id ="booking-dates">
-            <p><%= "from #{booking.start_time} to #{booking.end_time} " %></p>
+            <p><%= "start date #{booking.start_time} end date #{booking.end_time} " %></p>
             <div>
-              <%= cl_image_tag booking.ship.photo.key, crop: :fill %>
+              <%= cl_image_tag booking.ship.photo.key, height: 300, width: 400, crop: :fill %>
             </div>
             <div class="card-description">
               <h2><%= link_to booking.ship.name, ship_path(booking.ship)%></h2>
