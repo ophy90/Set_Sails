@@ -1,6 +1,7 @@
 <h1>Your bookings</h1>
 
 <tbody>
+  <div class = "container">
     <% @bookings.each do |booking| %>
       <h2><%= booking.ship.name%></h2>
       <h2><%= booking.start_time %></h2>
@@ -9,4 +10,5 @@
         <%# <td><%= link_to 'Destroy', ship, method: :delete, data: { confirm: 'Are you sure?' }</td> %> 
     <% end %>
     <p><%= link_to 'Back to ships', ships_path(@ships) %></p>
-  </tbody>
+  </div>
+</tbody>
