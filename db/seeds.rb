@@ -5,12 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require "open-uri"
 
 puts 'Cleaning database...'
 Ship.destroy_all
 
 puts 'Creating Ships...'
+file = URI.open('https://res.cloudinary.com/dfdp6jywx/image/upload/v1616489895/Yacht_1_fyiwop.jpg')
 ship_1 = Ship.create(name:"Titanic", description:"Grand navire", category:"paquebot", location: "New York", price: 500)
+ship_1.photo.attach(io: file, filename: 'ship.1.jpg', content_type: 'image/jpg')
 puts "Created ship "
 ship_2 = Ship.create(name:"Radeau", description:"Grand radeau", category:"bateau", location: "Genève", price: 323)
 puts "Created ship "

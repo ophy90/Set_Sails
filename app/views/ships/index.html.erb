@@ -6,7 +6,7 @@
       <%= link_to ship_path(ship) do %>
       <div class="card">
         <div>
-          <img class="ship-img" src="https://source.unsplash.com/1600x900/?boat,yacht" alt="ship image">
+          <%= cl_image_tag ship.photo.key, height: 300, width: 400, crop: :fill %>
         </div>
         <div class="card-description">
           <h2><%= ship.name %></h2>
@@ -25,3 +25,5 @@
       </div>
     </div>
     </tbody>
+
+              <%# <img class="ship-img" src="https://source.unsplash.com/1600x900/?boat,yacht" alt="ship image"> %>
