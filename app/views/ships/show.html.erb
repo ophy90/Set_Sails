@@ -45,7 +45,7 @@
         <strong><%=@ship.price%>
           CHF</strong>
         la nuit</p>
-      <a class="button" href="#">Réserver</a>
+      <%= link_to 'Book this awesome ship', new_ship_booking_path(@ship), class:"button" %>
     </div>
   </div>
   <div class="container-fourth col-md-6 offset-md-6">
