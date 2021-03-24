@@ -1,17 +1,13 @@
-<div class=full-page-size >
-</div>
-
-<div>
-<h1 class="title-index"> Please enter your booking dates</h1>
-</div>
-
-<div class="booking-form">
-<%= simple_form_for [@ship, @booking] do |f| %>
-  <%= f.input :start_time, as: :date, html5: true %>
-  <%= f.input :end_time, as: :date, html5: true %>
-  <%= f.button :submit, "Book now!", class: "button" %>
-<% end %>
- </div>
-    <%= link_to "back to homepage", root_path %>
-</div>
+<div class=full-page-size>
+  <div>
+    <h1 class="title-index"> Please enter your booking dates</h1>
+  </div>
+  <div class="booking-form">
+    <%= simple_form_for [@ship, @booking] do |f| %>
+    <%= f.input :start_time, as: :date, html5: true %>
+    <%= f.input :end_time, as: :date, html5: true %>
+    <%= f.button :submit, "Book now!", class: "button" %>
+    <% end %>
+      <%= link_to "back to homepage", root_path %>
+  </div>
 </div>
