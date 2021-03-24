@@ -5,7 +5,7 @@
     <div class="cards no-return">
       <% @bookings.each do |booking| %>
         <div class="card">
-          <div class ="booking-dates">
+          <div id ="booking-dates">
             <p><%= "from #{booking.start_time} to #{booking.end_time} " %></p>
             <div>
               <img class="ship-img" src="https://source.unsplash.com/1600x900/?boat,yacht" alt="ship image">
