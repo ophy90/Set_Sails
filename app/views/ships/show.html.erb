@@ -1,8 +1,54 @@
-<h1><%=@ship.name%></h1>
-<%# <%= cl_image_tag @cocktail.photo.key, height: 400, width: 600, crop: :fill %>
-<p><%=@ship.description%></p>
-<p><%=@ship.category%></p>
-<p><%=@ship.location%></p>
-<p><%=@ship.price%></p>
-<p><%= link_to 'Book this awesome ship', new_ship_booking_path(@ship) %></p>
-
+<div class="full-page-size margin-20 container">
+  <div class="title-ship container">
+    <div>
+      <h1><%=@ship.name%></h1>
+    </div>
+    <div class="subtitle-parent">
+      <div class="subtitle">
+        <i class="fas fa-ship"></i>
+        <p><%=@ship.category%></p>
+      </div>
+      <div class="subtitle">
+        <i class="fas fa-map-marker-alt"></i>
+        <p><%=@ship.location%></p>
+      </div>
+    </div>
+  </div>
+  <div class="container-first row">
+    <div class="details-ship col">
+      <p><%=@ship.description%></p>
+    </div>
+    <div class="ship-carrousel col">
+      <img class="ship-img-show" src="https://source.unsplash.com/1600x900/?boat,yacht" alt="ship image">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <h2>Caractéristiques</h2>
+      <div>
+        <div class="item">
+          <i class="fas fa-wifi"></i>
+          <p>Wifi gratuit</p>
+        </div>
+        <div class="item">
+          <i class="fas fa-dog"></i>
+          <p>Animaux autorisés</p>
+        </div>
+        <div class="item">
+          <i class="fas fa-leaf"></i>
+          <p>Bateau responsable</p>
+        </div>
+      </div>
+    </div>
+    <div class="container-second card col">
+      <p id="price-show">A partir de
+        <strong><%=@ship.price%>
+          CHF</strong>
+        la nuit</p>
+      <a class="button" href="#">Réserver</a>
+    </div>
+  </div>
+  <div class="container-fourth col-md-6 offset-md-6">
+    <h2>Reviews</h2>
+  </div>
+</div>

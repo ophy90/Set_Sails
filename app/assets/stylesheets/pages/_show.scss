@@ -1,0 +1,41 @@
+#price-show{
+  margin-bottom: 25px;
+  font-size: 25px;
+}
+
+.container-first{
+  display: flex;
+  justify-content: fex-start;
+}
+.container-second{
+  text-align: center;
+  padding: 30px;
+}
+.container-third{
+  display: flex;
+  justify-content: center;
+}
+.item{
+  display: flex;
+  align-items: center;
+}
+.fas{
+  margin-right: 5px;
+}
+.ship-img-show{
+   width:100%;
+}
+.subtitle-parent{
+  display: flex
+}
+.subtitle{
+  display: flex;
+  align-items:center;
+  margin-right: 10px;
+}
+.fa-ship, .fa-map-marker-alt {
+  opacity: 0.7;
+}
+.title-ship{
+  margin-bottom: 30px;
+}
