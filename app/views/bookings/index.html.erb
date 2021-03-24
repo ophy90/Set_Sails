@@ -1,0 +1,30 @@
+
+<body>
+  <div class="full-page-size margin-20">
+    <h1 class = "title-index">Your bookings</h1>
+    <div class="cards no-return">
+      <% @bookings.each do |booking| %>
+        <div class="card">
+          <div id ="booking-dates">
+            <p><%= "from #{booking.start_time} to #{booking.end_time} " %></p>
+            <div>
+              <img class="ship-img" src="https://source.unsplash.com/1600x900/?boat,yacht" alt="ship image">
+            </div>
+            <div class="card-description">
+              <h2><%= link_to booking.ship.name, ship_path(booking.ship)%></h2>
+            <%# <%= cl_image_tag @ship.photo.key, height: 300, width: 400, crop: :fill %>
+              <p><%= booking.ship.category%>
+                ∙
+                <%= booking.ship.location %></p>
+              <p class="card-price"><%= booking.ship.price %>
+                CHF</p>
+                <%# <td><%= link_to 'Edit', edit_ship_path(garden)</td> %>
+                  <%# <td><%= link_to 'Destroy', ship, method: :delete, data: { confirm: 'Are you sure?' }</td> %>
+            </div>
+          </div>
+        </div>
+      <%end %>
+    </div>
+    <p class="button" id="small"><%= link_to 'Back to ships', ships_path(@ships) %></p>
+  </div>
+</body>
