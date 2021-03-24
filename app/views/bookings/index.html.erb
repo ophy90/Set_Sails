@@ -8,7 +8,7 @@
           <div id ="booking-dates">
             <p><%= "from #{booking.start_time} to #{booking.end_time} " %></p>
             <div>
-              <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+              <%= cl_image_tag booking.ship.photo.key, crop: :fill %>
             </div>
             <div class="card-description">
               <h2><%= link_to booking.ship.name, ship_path(booking.ship)%></h2>
@@ -28,6 +28,3 @@
     <%= link_to 'Back to ships', ships_path(@ships), class:"button", id: "small" %>
   </div>
 </body>
-
-
-<%# <img class="ship-img" src="https://source.unsplash.com/1600x900/?boat,yacht" alt="ship image"> %>
