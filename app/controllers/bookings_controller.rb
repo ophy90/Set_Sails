@@ -18,7 +18,7 @@ class BookingsController < ApplicationController
     @booking.ship = @ship
     @booking.user = current_user
     if @booking.save
-      redirect_to ship_path(@ship)
+      redirect_to ship_booking_path(@ship)
     else
       render :new
     end
