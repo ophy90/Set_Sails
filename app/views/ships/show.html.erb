@@ -19,7 +19,7 @@
       <p><%=@ship.description%></p>
     </div>
     <div class="ship-carrousel col">
-      <img class="ship-img-show" src="https://source.unsplash.com/1600x900/?boat,yacht" alt="ship image">
+      <%= cl_image_tag @ship.photo.key, height: 200, width: 350, crop: :fill, class: "ship-img-show" %>
     </div>
   </div>
   <div class="row">
