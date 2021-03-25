@@ -8,6 +8,7 @@
   display: flex;
   flex-flow: row;
   align-items: center;
+  justify-content:space-around;
 }
 
 .center-button{
@@ -22,4 +23,18 @@
 }
 .listing-card{
   padding: 15px;
+    &:hover{
+
+    }
+}
+.details_link{
+  color: $orange;
+  font-weight: normal;
+  transition-duration: 0.2s;
+  border-bottom: 0px;
+    &:hover{
+      color: $orange;
+      border-bottom: 2px solid $orange;
+      transition-duration: 0.2s;
+    }
 }

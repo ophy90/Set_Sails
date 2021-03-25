@@ -8,16 +8,19 @@
       <div id="booking-dates">
         <div class="card-description listing-booking">
           <i class="fas fa-calendar-alt"></i>
-        </div>
-        <div class="card-description listing-booking">
           <p><%= "#{booking.start_time}-#{booking.end_time}" %></p>
         </div>
+
         <div class="card-description listing-booking">
-          <i class="fas fa-map-marker-alt"></i>
+          <i class="fas fa-ship"></i>
           <p><%= link_to booking.ship.name, ship_path(booking.ship)%></p>
         </div>
         <div class="card-description listing-booking">
-          <p>See details</p>
+          <i class="fas fa-map-marker-alt"></i>
+          <p><%= "#{booking.ship.location} "%></p>
+        </div>
+        <div class="card-description listing-booking">
+          <a class="details_link" href="#">See details</a>
         </div>
       </div>
     </div>
