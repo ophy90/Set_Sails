@@ -11,25 +11,26 @@
         <% end %>
       </div>
     </div>
-
-    <div class="cards">
-      <% @ships.each do |ship| %>
-      <%= link_to ship_path(ship) do %>
-          <div class="card">
-            <div>
-              <%= cl_image_tag ship.photo.key, height: 200, width: 350, crop: :fill %>
+    <div>
+      <div class="cards">
+        <% @ships.each do |ship| %>
+          <%= link_to ship_path(ship) do %>
+            <div class="card">
+              <div>
+                <%= cl_image_tag ship.photo.key, height: 200, width: 350, crop: :fill %>
+              </div>
+              <div class="card-description">
+                <h2><%= ship.name %></h2>
+                <p><%= ship.category%>
+                  ∙
+                  <%= ship.location %></p>
+                <p class="card-price"><%= ship.price %>
+                  CHF</p>
+              </div>
             </div>
-            <div class="card-description">
-              <h2><%= ship.name %></h2>
-              <p><%= ship.category%>
-                ∙
-                <%= ship.location %></p>
-              <p class="card-price"><%= ship.price %>
-                CHF</p>
-            </div>
-          </div>
+          <% end %>
         <% end %>
-      <% end %>
+      </div>
     </div>
   </div>
 </tbody>
