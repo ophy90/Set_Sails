@@ -13,6 +13,14 @@ class ShipsController < ApplicationController
 
   def show
     @ship = Ship.find(params[:id])
+         # the `geocoded` scope filters only flats with coordinates (latitude & longitude)
+    if @ship.geocoded?
+      @markers = [{
+        lat: @ship.latitude,
+        lng: @ship.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { ship: @ship })
+      }]
+    end
   end
 
   def new
