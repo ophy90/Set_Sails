@@ -12,22 +12,37 @@ Ship.destroy_all
 
 puts 'Creating Ships...'
 file = URI.open('https://res.cloudinary.com/dfdp6jywx/image/upload/v1616489895/Yacht_1_fyiwop.jpg')
-ship_1 = Ship.create(name:"Titanic", description:"Grand navire", category:"paquebot", location: "New York", price: 500)
+ship_1 = Ship.create(name:"Motor Yacht KHALILAH", description:"Motor Yacht KHALILAH for Charter with SuperYachtsMonaco
+49m SuperSport KHALILAH is the largest private yacht built entirely in carbon composite – and now she’s available for charter. Delivered in 2015 by Palmer Johnson, her dynamic design combines performance and space to offer seriously smooth cruising. A unique fast displacement yacht, KHALILAH is cool, fiercely stylish, and the golden girl of the charter scene.", category:"paquebot", location: "New York", price: 500)
 ship_1.photo.attach(io: file, filename: 'ship.1.jpg', content_type: 'image/jpg')
 puts "Created ship "
-ship_2 = Ship.create(name:"Radeau", description:"Grand radeau", category:"bateau", location: "Genève", price: 323)
+file = URI.open('https://res.cloudinary.com/dfdp6jywx/image/upload/v1616489895/Yacht_2_pozzol.jpg')
+ship_2 = Ship.create(name:"Yacht Luxus", description:"Beau", category:"Yacht", location: "Geneva", price: 10000)
+ship_2.photo.attach(io: file, filename: 'ship.2.jpg', content_type: 'image/jpg')
 puts "Created ship "
-ship_3 = Ship.create(name:"Barque", description:"Grande barque", category:"bateau", location: "Lausanne", price: 70.5)
+file = URI.open('https://res.cloudinary.com/dfdp6jywx/image/upload/v1616489895/Yacht_3_qkezwl.jpg')
+ship_3 = Ship.create(name:"Yacht Luxus", description:"Beau", category:"Yacht", location: "Geneva", price: 75000)
+ship_3.photo.attach(io: file, filename: 'ship.3.jpg', content_type: 'image/jpg')
 puts "Created ship "
-ship_4 = Ship.create(name:"Militaire", description:"Grand navire de guerre militaire", category:"militaire", location: "Montreux", price: 5000)
+file = URI.open('https://res.cloudinary.com/dfdp6jywx/image/upload/v1616595448/barque_k45kv8.jpg')
+ship_4 = Ship.create(name:"Small boat", description:"Small boat", category:"Small Boat", location: "Krabi", price: 100)
+ship_4.photo.attach(io: file, filename: 'ship.4.jpg', content_type: 'image/jpg')
 puts "Created ship "
-ship_5 = Ship.create(name:"Yacht", description:"Grand yacht de luxe", category:"yacht", location: "Saint-maurice", price: 54942)
+file = URI.open('https://res.cloudinary.com/dfdp6jywx/image/upload/v1616583350/1000x-1_rn3l3w.jpg')
+ship_5 = Ship.create(name:"Oil Tanker", description:"Nice and spacious platform.", category:"Oil Tanker", location: "Los Angeles", price: 100000)
+ship_5.photo.attach(io: file, filename: 'ship.5.jpg', content_type: 'image/jpg')
 puts "Created ship "
-ship_6 = Ship.create(name:"Pétrolier", description:"Petrolier d'essence", category:"pétrolier", location: "Valencia", price: 70235)
+file = URI.open('https://res.cloudinary.com/dfdp6jywx/image/upload/v1616489895/Yacht_3_qkezwl.jpg')
+ship_6 = Ship.create(name:"Yacht Magnificus", description:"A yacht is a craft used for pleasure and sport. ", category:"Yacht", location: "Geneva", price: 10000)
+ship_6.photo.attach(io: file, filename: 'ship.6.jpg', content_type: 'image/jpg')
 puts "Created ship "
-ship_7 = Ship.create(name:"Voilier", description:"Voilier à moteur et coque en bois de bambou", category:"voilier", location: "Caraibes", price: 702389)
+file = URI.open('https://res.cloudinary.com/dfdp6jywx/image/upload/v1616595882/rms_titanic_wbvp5j.jpg')
+ship_7 = Ship.create(name:"Titanic", description:"A yacht is a craft used for pleasure and sport. ", category:"Cruise", location: "Dubai", price: 200000)
+ship_7.photo.attach(io: file, filename: 'ship.7.jpg', content_type: 'image/jpg')
 puts "Created ship "
-ship_8 = Ship.create(name:"Voilier à rames", description:"Voilier à rames", category:"voilier", location: "Caraibes", price: 702039)
+file = URI.open('https://res.cloudinary.com/dfdp6jywx/image/upload/v1616598109/ship_2_rjwji6.jpg')
+ship_8 = Ship.create(name:"Yacht", description:"A yacht is a craft used for pleasure and sport. ", category:"Yacht", location: "Sydney", price: 10000)
+ship_8.photo.attach(io: file, filename: 'ship.7.jpg', content_type: 'image/jpg')
 puts "Created ship "
 
 
