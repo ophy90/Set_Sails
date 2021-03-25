@@ -8,7 +8,7 @@ class ShipsController < ApplicationController
         @ships = Ship.where("category ILIKE ?", "%#{params[:category]}%")
     else
       @ships = Ship.all
-    end
+   end
   end
 
   def show
