@@ -5,10 +5,21 @@
 
 #booking-dates {
   font-weight: bold;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
 }
 
 .center-button{
   display: flex;
   align-content: center;
   margin-top: 25px;
+}
+.listing-booking{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.listing-card{
+  padding: 15px;
 }

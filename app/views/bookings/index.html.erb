@@ -1,37 +1,30 @@
-
 <body>
   <div class="full-page-size margin-20">
-    <h1 class = "title-index">Your bookings</h1>
-    <div class="cards no-return">
+    <h1 class="title-index">Your bookings</h1>
+
+  <div>
       <% @bookings.each do |booking| %>
-        <div class="card">
-          <div id ="booking-dates">
-            <div class="card-description">
-            <p>From</p>
-            <h3><%= "#{booking.start_time}" %></h3>
-            <p>To</p>
-            <h3><%= "#{booking.end_time}" %></h3>
-            </div>
-            <div>
-              <%= cl_image_tag booking.ship.photo.key, height: 300, width: 400, crop: :fill %>
-            </div>
-            <div class="card-description">
-              <h2><%= link_to booking.ship.name, ship_path(booking.ship)%></h2>
-            <%# <%= cl_image_tag @ship.photo.key, height: 300, width: 400, crop: :fill %>
-              <p><%= booking.ship.category%>
-                ∙
-                <%= booking.ship.location %></p>
-              <p class="card-price"><%= booking.ship.price %>
-                CHF</p>
-                <%# <td><%= link_to 'Edit', edit_ship_path(garden)</td> %>
-                  <%# <td><%= link_to 'Destroy', ship, method: :delete, data: { confirm: 'Are you sure?' }</td> %>
-            </div>
-          </div>
+    <div class="card listing-card">
+      <div id="booking-dates">
+        <div class="card-description listing-booking">
+          <i class="fas fa-calendar-alt"></i>
         </div>
-      <%end %>
+        <div class="card-description listing-booking">
+          <p><%= "#{booking.start_time}-#{booking.end_time}" %></p>
+        </div>
+        <div class="card-description listing-booking">
+          <i class="fas fa-map-marker-alt"></i>
+          <p><%= link_to booking.ship.name, ship_path(booking.ship)%></p>
+        </div>
+        <div class="card-description listing-booking">
+          <p>See details</p>
+        </div>
+      </div>
     </div>
-    <div class="center-button">
-    <%= link_to 'Back to ships', ships_path(@ships), class:"button", id: "small" %>
-    </div>
-  </div>
+  <%end %>
+</div>
+<div class="center-button">
+  <%= link_to 'Back to ships', ships_path(@ships), class:"button", id: "small" %>
+</div>
+</div>
 </body>
