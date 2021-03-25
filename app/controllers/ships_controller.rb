@@ -9,7 +9,8 @@ class ShipsController < ApplicationController
     if @ship.geocoded?
       @markers = [{
         lat: @ship.latitude,
-        lng: @ship.longitude
+        lng: @ship.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { ship: @ship })
       }]
     end
   end
