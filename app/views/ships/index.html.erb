@@ -1,6 +1,10 @@
 <tbody>
 <div class="full-page-size">
   <h1 class="title-index">All the ships</h1>
+  <%= form_tag ships_path, method: :get do %>
+  <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "City"%>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
   <div class="cards">
     <% @ships.each do |ship| %>
       <%= link_to ship_path(ship) do %>
