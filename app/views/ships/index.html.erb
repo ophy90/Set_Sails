@@ -2,7 +2,8 @@
 <div class="full-page-size">
   <h1 class="title-index">All the ships</h1>
   <%= form_tag ships_path, method: :get do %>
-  <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "City"%>
+  <%= text_field_tag :location, params[:location], class: "form-control", placeholder: "City"%>
+  <%= text_field_tag :category, params[:category], class: "form-control", placeholder: "Choose a category"%>
   <%= submit_tag "Search", class: "btn btn-primary" %>
 <% end %>
   <div class="cards">

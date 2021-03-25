@@ -1,10 +1,12 @@
 class ShipsController < ApplicationController
   def index
-    if params[:query].present?
-      @ships = Ship.where("location ILIKE ?", "%#{params[:query]}%")
+    if params["location"].present? || params["category"].present?
+      # @ships = Ship.where("location ILIKE ?", "%#{params["location"]["category"]}%")
+      @ships = Ship.where(location:params["location"]).where(category:params["category"])
     else
       @ships = Ship.all
     end
+    raise
   end
 
   def show
@@ -20,5 +22,11 @@ class ShipsController < ApplicationController
   def ship_params
     params.require(:ship).permit(:name, :description, :category, :location, :price, :photo)
   end
+
+
+  def search_params
+    params.require(:ship).permit(:location, :category)
+  end
+
 
 end
