@@ -4,3 +4,20 @@
   padding: 50px;
   margin: 0 auto;
 }
+.center-button-new{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.back{
+  font-size: 10px;
+  color: $deep-blue;
+  text-decoration: underline;
+  margin-top: 8px;
+  opacity: 0.5;
+    &:hover{
+      text-decoration: underline;
+      color: $deep-blue;
+      opacity: 0.5;
+    }
+}
