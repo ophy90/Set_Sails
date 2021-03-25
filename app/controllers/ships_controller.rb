@@ -10,11 +10,11 @@ class ShipsController < ApplicationController
       @ships = Ship.all
    end
 
-   @markers = @flats.geocoded.map do |flat|
+   @markers = @ships.geocoded.map do |ship|
       {
-        lat: flat.latitude,
-        lng: flat.longitude,
-        infoWindow: render_to_string(partial: "info_window", locals: { ship: @ship })
+        lat: ship.latitude,
+        lng: ship.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { ship: ship })
       }
     end
   end
