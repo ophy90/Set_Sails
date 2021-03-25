@@ -1,12 +1,14 @@
 class ShipsController < ApplicationController
   def index
-    if params["location"].present? || params["category"].present?
-      # @ships = Ship.where("location ILIKE ?", "%#{params["location"]["category"]}%")
-      @ships = Ship.where(location:params["location"]).where(category:params["category"])
+    if params[:location].present? && params[:category].present?
+      @ships = Ship.where("location ILIKE ?", "%#{params[:location]}%").where("category ILIKE ?", "%#{params[:category]}%")
+    elsif params[:location].present?
+      @ships = Ship.where("location ILIKE ?", "%#{params[:location]}%")
+      elsif params[:category].present?
+        @ships = Ship.where("category ILIKE ?", "%#{params[:category]}%")
     else
       @ships = Ship.all
     end
-    raise
   end
 
   def show
