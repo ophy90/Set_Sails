@@ -1,7 +1,7 @@
 <tbody>
-  <div class="full-page-size">
+  <div class="full-page-size container">
     <h1 class="title-index">All the ships</h1>
-    <div class="search-form-wrapper">
+    <div class="search-form-wrapper row">
       <div class="search-form">
         <p>Search by location or ship category</p>
         <%= form_tag ships_path, method: :get do %>
@@ -11,7 +11,7 @@
         <% end %>
       </div>
     </div>
-    <div class = "row">
+      <div class="row">
       <div class="cards col">
         <% @ships.each do |ship| %>
           <%= link_to ship_path(ship) do %>
@@ -30,7 +30,9 @@
             </div>
           <% end %>
         <% end %>
-        <div class ="col" id="map" style="width: 400px; height: 200px;" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+      </div>
+      <div class="col" >
+        <div id="map" style="width: 50%; height: 600px;" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
       </div>
     </div>
   </div>
