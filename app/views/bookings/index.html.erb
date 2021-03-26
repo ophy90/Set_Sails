@@ -1,7 +1,6 @@
 <body>
   <div class="full-page-size margin-20">
     <h1 class="title-index">Your bookings</h1>
-  </div>
   <% @bookings.each do |booking| %>
     <div id="modal-<%= booking.id %>" class="modal">
       <div class="modal-container modal-bg">
@@ -54,5 +53,6 @@
 
   <div class="center-button">
     <%= link_to 'Back to ships', ships_path(@ships), class:"button", id: "small" %>
+  </div>
   </div>
 </body>

@@ -9,7 +9,7 @@
         <p><%=@ship.category%></p>
       </div>
       <div class="subtitle">
-        <i class="fas fa-map-marker-alt"></i>
+        <i class="fas fa-map-marker-alt m-3"></i>
         <p><%=@ship.location%></p>
       </div>
     </div>
@@ -17,39 +17,38 @@
   <div class="container-first row">
     <div class="details-ship col">
       <div id="map" style="width: 400px; height: 200px;" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-      <p><%=@ship.description%></p>
+    <div class="card mt-3">
+      <p class="ship-description p-2"><%=@ship.description%></p>
+    </div>
     </div>
     <div class="ship-carrousel col">
       <%= cl_image_tag @ship.photo.key, height: 200, width: 350, crop: :fill, class: "ship-img-show" %>
     </div>
   </div>
   <div class="row">
-    <div class="col">
-      <h2>Caractéristiques</h2>
+    <div class="col card m-3">
+      <h2>Caracteristics</h2>
       <div>
         <div class="item">
           <i class="fas fa-wifi"></i>
-          <p>Wifi gratuit</p>
+          <p>Free Wifi</p>
         </div>
         <div class="item">
           <i class="fas fa-dog"></i>
-          <p>Animaux autorisés</p>
+          <p>Pets Allowed</p>
         </div>
         <div class="item">
           <i class="fas fa-leaf"></i>
-          <p>Bateau responsable</p>
+          <p>responsable boat</p>
         </div>
       </div>
     </div>
-    <div class="container-second card col">
-      <p id="price-show">A partir de
+    <div class="container-second card col m-3">
+      <p id="price-show">From
         <strong><%=@ship.price%>
           CHF</strong>
-        la nuit</p>
+        the day</p>
       <%= link_to 'Book this awesome ship', new_ship_booking_path(@ship), class:"button" %>
     </div>
-  </div>
-  <div class="container-fourth col-md-6 offset-md-6">
-    <h2>Reviews</h2>
   </div>
 </div>
