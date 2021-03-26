@@ -16,10 +16,10 @@
       </div>
     </div>
     <div class="row">
-      <div class="cards col">
+      <div id="cards-index" class="cards col">
         <% @ships.each do |ship| %>
           <%= link_to ship_path(ship) do %>
-            <div class="card">
+            <div id="card-index" class="card" >
               <div>
                 <%= cl_image_tag ship.photo.key, height: 200, width: 350, crop: :fill %>
               </div>
