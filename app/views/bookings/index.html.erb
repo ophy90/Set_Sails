@@ -3,10 +3,28 @@
     <h1 class="title-index">Your bookings</h1>
   </div>
   <% @bookings.each do |booking| %>
-    <div id="modal-<%= booking.id %>" class="modal-container modal modal-bg">
+    <div id="modal-<%= booking.id %>" class="modal">
+      <div class="modal-container modal-bg">
       <div class="card-modal card card-description">
-        <%= "#{booking.ship.name} "%>
+        <%= link_to "#", data: {toggle: "modal", target: "#modal-#{booking.id}"}, class: 'details-link' do %>
+          <i class="fas fa-times"></i>
+        <%end %>
+        <h1><%= "Réservation ##{booking.ship.id} "%></h1>
+        <p><%= "#{booking.start_time} - #{booking.end_time}" %></p>
+        <div>
+
+        <h2><%= "#{booking.ship.name} "%></h2>
+        </div>
+        <div class="listing-booking">
+          <i class="fas fa-ship"></i>
+          <p><%= booking.ship.category%></p>
+        </div>
+        <div class="listing-booking">
+          <i class="fas fa-map-marker-alt"></i>
+          <p><%= booking.ship.location %></p>
+        </div>
       </div>
+    </div>
     </div>
   <%end %>
   <% @bookings.each do |booking| %>
@@ -28,13 +46,14 @@
       </div>
       <div class="card-description listing-booking">
         <%= link_to "#", data: {toggle: "modal", target: "#modal-#{booking.id}"}, class: 'details-link' do %>
-        <a class="details_link" href="#">See details</a>
+          <p class="details-link">See details</p>
+        <%end %>
       </div>
     </div>
   </div>
   </div>
 <%end %>
-<%end %>
+
   <div class="center-button">
     <%= link_to 'Back to ships', ships_path(@ships), class:"button", id: "small" %>
   </div>
