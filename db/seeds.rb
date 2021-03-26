@@ -13,7 +13,7 @@ Ship.destroy_all
 puts 'Creating Ships...'
 file = URI.open('https://res.cloudinary.com/dfdp6jywx/image/upload/v1616489895/Yacht_1_fyiwop.jpg')
 ship_1 = Ship.create(name:"Motor Yacht KHALILAH", description:"Motor Yacht KHALILAH for Charter with SuperYachtsMonaco
-49m SuperSport KHALILAH is the largest private yacht built entirely in carbon composite – and now she’s available for charter. Delivered in 2015 by Palmer Johnson, her dynamic design combines performance and space to offer seriously smooth cruising. A unique fast displacement yacht, KHALILAH is cool, fiercely stylish, and the golden girl of the charter scene.", category:"paquebot", location: "New York", price: 500)
+49m SuperSport KHALILAH is the largest private yacht built entirely in carbon composite – and now she’s available for charter. Delivered in 2015 by Palmer Johnson, her dynamic design combines performance and space to offer seriously smooth cruising. A unique fast displacement yacht, KHALILAH is cool, fiercely stylish, and the golden girl of the charter scene.", category:"Yacht", location: "Miami Harbour", price: 500)
 ship_1.photo.attach(io: file, filename: 'ship.1.jpg', content_type: 'image/jpg')
 puts "Created ship "
 file = URI.open('https://res.cloudinary.com/dfdp6jywx/image/upload/v1616489895/Yacht_2_pozzol.jpg')
