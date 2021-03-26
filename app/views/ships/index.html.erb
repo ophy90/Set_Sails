@@ -6,9 +6,9 @@
         <div class="search-form">
           <p>Search by location or ship category</p>
           <%= form_tag ships_path, method: :get do %>
-            <%= text_field_tag :location, params[:location], class: "form-control", placeholder: "Enter a location"%>
-            <%= text_field_tag :category, params[:category], class: "form-control", placeholder: "Choose a category"%>
-            <%= submit_tag "Search", class: "btn btn-primary" %>
+            <%= text_field_tag :location, params[:location], class: "form-control", placeholder: "Enter a location", class: "search-form-field"%>
+            <%= text_field_tag :category, params[:category], class: "form-control", placeholder: "Choose a category", class: "search-form-field"%>
+            <%= submit_tag "Search", class: "btn btn-primary search-form-field" %>
           <% end %>
         </div>
       </div>
