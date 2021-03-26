@@ -43,9 +43,10 @@
         </div>
       </div>
     </div>
+
     <div class="container-second card col m-3">
       <p id="price-show">From
-        <strong><%=@ship.price%>
+        <strong><%=@ship.price.to_i%>
           CHF</strong>
         the day</p>
       <%= link_to 'Book this awesome ship', new_ship_booking_path(@ship), class:"button" %>
