@@ -19,8 +19,8 @@ a{
 }
 
 .search-form {
-  width: 400px;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .col {
@@ -28,7 +28,23 @@ a{
   padding: 0;
 }
 
-.search-form-field {
+.style-form-input {
   margin: 10px;
+  background-color: #ECECEC;
+  border: none;
+  padding: 15px;
+  padding-left: 15px;
+  color: #AEAEAE;
+  border-radius: 50px;
+  padding-left: 25px;
+}
+
+.search-form-field {
+margin: 10px;
+border: none;
+padding: 15px;
+padding-left: 15px;
+border-radius: 50px;
+padding-left: 25px;
 }
 
