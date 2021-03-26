@@ -12,7 +12,7 @@
       </div>
     </div>
       <div class="row">
-      <div class="cards col">
+      <div class="cards col-lg-4">
         <% @ships.each do |ship| %>
           <%= link_to ship_path(ship) do %>
             <div class="card">
@@ -31,8 +31,8 @@
           <% end %>
         <% end %>
       </div>
-      <div class="col" >
-        <div id="map" style="width: 50%; height: 600px;" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+      <div class="col-lg-8" >
+        <div id="map" style="width: 100%; height: 1000px;" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
       </div>
     </div>
   </div>
