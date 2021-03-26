@@ -6,6 +6,6 @@ class Ship < ApplicationRecord
   geocoded_by :location
   after_validation :geocode, if: :will_save_change_to_location?
 
-  CATEGORIES = ["Bateau",  "Radeau", "Yacht", "Militaire", "Sous-Marin", "Porte Container", "Oil Tanker", "Cruise", "Small Boat", "Autres"]
+  CATEGORIES = ["Bateau",  "Radeau", "Yacht", "Militaire", "Sous-Marin", "Porte Container", "Oil Tanker", "Cruise", "Small Boat", "Aircraft Carrier", "Autres"]
   validates :category, inclusion: { in: CATEGORIES }
 end
