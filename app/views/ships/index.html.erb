@@ -1,40 +1,40 @@
 <tbody>
   <div class="full-page-size container">
     <h1 class="title-index">All the ships</h1>
-    <div class="search-form-wrapper row">
-      <div class="search-form" id="search">
-        <p>Search by location or ship category</p>
-        <%= form_tag ships_path, method: :get do %>
-          <%= text_field_tag :location, params[:location], class: "form-control", placeholder: "Enter a location"%>
-          <%= text_field_tag :category, params[:category], class: "form-control", placeholder: "Choose a category"%>
-          <%= submit_tag "Search", class: "btn btn-primary" %>
-        <% end %>
+    <div class="search-form-wrapper row align-items-center">
+      <div class="col-lg-6">
+        <div class="search-form">
+          <p>Search by location or ship category</p>
+          <%= form_tag ships_path, method: :get do %>
+            <%= text_field_tag :location, params[:location], class: "form-control", placeholder: "Enter a location"%>
+            <%= text_field_tag :category, params[:category], class: "form-control", placeholder: "Choose a category"%>
+            <%= submit_tag "Search", class: "btn btn-primary" %>
+          <% end %>
+        </div>
+      </div>
+      <div class="col-lg-6" >
+        <div id="map" style="width: 100%; height: 500px;" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
       </div>
     </div>
     <div class="row">
-      <div class="col" >
-        <div id="map" style="width: 100%; height: 500px;" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-      </div>
-      <div class="row">
-        <div class="cards col">
-          <% @ships.each do |ship| %>
-            <%= link_to ship_path(ship) do %>
-              <div class="card">
-                <div>
-                  <%= cl_image_tag ship.photo.key, height: 200, width: 350, crop: :fill %>
-                </div>
-                <div class="card-description">
-                  <h2><%= ship.name %></h2>
-                  <p><%= ship.category%>
-                    ∙
-                    <%= ship.location %></p>
-                  <p class="card-price"><%= ship.price %>
-                    CHF</p>
-                </div>
+      <div class="cards col">
+        <% @ships.each do |ship| %>
+          <%= link_to ship_path(ship) do %>
+            <div class="card">
+              <div>
+                <%= cl_image_tag ship.photo.key, height: 200, width: 350, crop: :fill %>
               </div>
-            <% end %>
+              <div class="card-description">
+                <h2><%= ship.name %></h2>
+                <p><%= ship.category%>
+                  ∙
+                  <%= ship.location %></p>
+                <p class="card-price"><%= ship.price %>
+                  CHF</p>
+              </div>
+            </div>
           <% end %>
-        </div>
+        <% end %>
       </div>
     </div>
   </div>
