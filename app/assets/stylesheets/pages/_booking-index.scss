@@ -5,10 +5,63 @@
 
 #booking-dates {
   font-weight: bold;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-around;
 }
 
-.center-button{
+.center-button {
   display: flex;
   align-content: center;
   margin-top: 25px;
+}
+
+.listing-booking {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.listing-card {
+  padding: 15px;
+}
+
+.details_link {
+  color: $orange;
+  font-weight: normal;
+  transition-duration: 0.2s;
+  border-bottom: 0;
+
+  &:hover {
+    color: $orange;
+    border-bottom: 2px solid $orange;
+    transition-duration: 0.2s;
+  }
+}
+
+.modal-bg {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(41, 50, 65, 0.30);
+  position: fixed;
+}
+
+.card-modal {
+  z-index: 3;
+  height: 300px;
+  width: 700px;
+  padding: 35px !important;
+}
+
+.modal-container {
+  display: flex;
+  justify-content: center;
+}
+
+.fa-times {
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  font-size: 25px;
 }
