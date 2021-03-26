@@ -9,6 +9,14 @@ class ShipsController < ApplicationController
     else
       @ships = Ship.all
    end
+
+   @markers = @ships.geocoded.map do |ship|
+      {
+        lat: ship.latitude,
+        lng: ship.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { ship: ship })
+      }
+    end
   end
 
   def show
