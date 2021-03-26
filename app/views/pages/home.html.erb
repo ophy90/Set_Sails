@@ -19,7 +19,7 @@
               <p><%= ship.category%>
                 ∙
                 <%= ship.location %></p>
-              <p class="card-price"><%= ship.price %>
+              <p class="card-price"><%= ship.price.to_i %>
                 CHF</p>
               <%# <td><%= link_to 'Edit', edit_ship_path(garden)</td> %>
                 <%# <td><%= link_to 'Destroy', ship, method: :delete, data: { confirm: 'Are you sure?' }</td> %>
