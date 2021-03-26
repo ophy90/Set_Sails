@@ -43,7 +43,7 @@
     </div>
     <div class="container-second card col">
       <p id="price-show">A partir de
-        <strong><%=@ship.price%>
+        <strong><%=@ship.price.to_i%>
           CHF</strong>
         la nuit</p>
       <%= link_to 'Book this awesome ship', new_ship_booking_path(@ship), class:"button" %>
